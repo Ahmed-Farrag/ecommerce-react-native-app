@@ -42,9 +42,10 @@ export default function Input(props) {
         <TextInput
           {...rest}
           placeholder={stacked ? '' : placeholder}
-          style={
-            ({padding: 0, textAlign: placeholderPosition || 'left'}, style)
-          }
+          style={[
+            {flex: 1, padding: 0, textAlign: placeholderPosition || 'left'},
+            style,
+          ]}
         />
         {renderIconRight && (
           <View style={([styles.iconWrapper], iconWrapperStyle)}>
